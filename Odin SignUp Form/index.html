@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=b, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="bg-container">
+            <div class="overlay">
+                <div class="components">
+                <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt="logo">
+                <p>Odin</p>
+                </div>
+            </div>
+        </div>
+        <div class="text">
+            <div class="copy">
+                <p class="main-text" style="display: inline-block;">
+                   This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.  You know you want to.
+                   Let's do this ! 
+                </p>
+            </div>
+            <form action="">
+            <p class="intro" style="font-family: Anuphan; font-size: 20px; font-weight: bold;">Let's do this !</p>
+                <label for="fname">First Name</label>            
+                    <input type="text" name="" id="fname">
+                  
+                          <label for="lname">Last Name</label>   
+                                 <input type="text" name="" id="lname">         
+                              <label for="email">Email</label>            
+                                  <input type="email" name="" id="email">
+                                      <label for="pnum">Phone Number</label>            
+                                          <input type="tel" name="" id="pnum">  
+                                                       <label for="pword">Password</label>
+                                                           <input type="password" name="" id="pword" pattern="/[A-Z][a-z][0-9]*/" required>
+                                                                 <span data-validation-text>Must be 2 chars or more, only numbers and spaces allowed</span>      
+                                                           <label for="cpword">Confirm Password</label>            
+                                                                       <input type="password" name="" pattern="/[A-Z][a-z][0-9]*/" id="cpword"> 
+                                                                       <span data-validation-text>Must be 2 chars or more, only numbers and spaces allowed</span>
+                                                                            <div class="section-3">         
+                                                                       <input type="submit" value="CREATE ACCOUNT!"> 
+                                                                       <p>Already have an account? <a href="#">Log In</a></p>
+                        </form> 
+                        </div>
+        </div>
+    </div>
+    <style>
+        @font-face {
+            font-family: Norse Bold;
+            src: url("Norse-Bold.otf");
+        }
+        *{
+            margin:0;
+            font-family:Anuphan;
+        }
+        a {
+            text-decoration: none;
+            color:#596D48;
+        }
+        .container{
+            display:flex;
+        }
+        .bg-container{
+            width:45%;
+            background-image: url("https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+            background-size: cover;
+            height:700px;
+            max-height: 100%;
+        }
+        .overlay{
+            position:absolute;
+            background-color: black;
+            opacity:50%;
+            color:#ffffff;
+            width:320px;
+            top:35%;
+        }
+        .components{
+            width:auto;
+            height:150px;
+            display: flex;
+            flex-direction: row;
+        
+        }
+        .overlay img{
+            width:100px;
+            height:100px;
+        }
+        .overlay p{
+            font-size:110px;
+            font-family:Norse Bold;
+            text-transform: capitalize;
+            padding-left:15px;
+            
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+        }
+        .copy,form, .section-3{
+            width:100%;
+
+        } 
+        .main-text{
+            padding:50px;
+            font-family:Anuphan, "Calibri";
+            width:70%;
+            line-height: 1.5;
+            font-weight: bold;
+            font-size:20px;
+
+        }
+        form {
+         padding:20px 0px 0px 20px;
+         display: flex;
+        width: 70vw;
+        flex-flow: row wrap;
+        gap: 1rem;
+        font-size: 1rem;
+        background-color: beige;
+         
+         
+        }
+        
+        form label{
+            font-family:Anuphan;
+        }
+        form input:focus{
+            outline:#E5E7EB;
+            border: #E5E7EB;
+        }
+        [data-validation-text]{
+            display:none;
+            font-size:14px;
+        }
+        
+       input:hover:invalid:not(:placeholder-shown) + [data-validation-text] {
+            color: red !important;
+            display: block;
+}
+        input[type="submit"]{
+            color:white;
+            width:200px;
+            height:60px;
+            border-radius: 15px;
+            border: none;
+            background-color:#596D48;
+            font-family: Anuphan;
+            font-size: 15px;
+            margin:20px;
+        }
+        input[type="submit"]:hover{
+            background-color:white;
+            color:#596D48;
+            transition:all 1s ease;
+        }
+    </style>
+</body>
+</html>
