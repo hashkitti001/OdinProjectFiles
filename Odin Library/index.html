@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>Odin Project Library</title>
+</head>
+
+<body>
+    <button id="newbook" onclick="showForm()">New Book<i class="fa fa-plus"></i></button>
+    <div id="form">
+        <p>Add Book</p>
+        <label for="author">Author</label>
+        <input type="text" id="author">
+        <label for="title">Title</label>
+        <input type="text" id="title">
+        <label for="numofpages">Number of Pages</label>
+        <input type="text" id="numofpages">
+        <label for="readstatus">Read Status</label>
+        <input type="checkbox" id="readstatus">
+        <input type="submit" value="Add Book" id="submit" onclick="addBookToLibrary(createNewBook()); render()">
+    </div>
+
+    <section class="library">
+        <p style="text-align:center;
+        font-size:40px;
+        font-weight:bolder;
+        color:white;
+        margin-top:10px">Library</p>
+
+    </section>
+
+</body>
+
+</html>
