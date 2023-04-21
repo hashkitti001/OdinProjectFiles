@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>Registration Form</p>
+        <label for="email">Email:</label>
+        <input type="email" minlength="8" required>
+        <label for="country">Country</label>
+        <input type="text" required>
+        <label for="zip">Zip Code:</label>
+        <input type="number" required>
+        <label for="password">Password:</label>
+        <input type="password" minlength= 8 pattern="\(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$\
+        gi" required>
+        <label for="cpassword">Confirm Password:</label>
+         <input type="password" minlength= 8 pattern="\(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$\
+         gi" required>
+         <input type="submit" value="Submit">
+    </form>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            color:white;
+            font-family: 'Anuphan', sans-serif;
+        }
+        body{
+            background: rgb(2,0,36) !important;
+              background: linear-gradient(331deg, rgba(2,0,36,1) 0%, rgba(139,88,94,1) 0%, rgba(53,101,125,1) 14%, rgba(40,127,156,1) 29%, rgba(0,212,255,1) 100%) !important;
+        }
+        form{
+            display:flex;
+            flex-direction: column;
+            background:black;
+            width:100%;
+            height:100%;
+        }
+        p{
+            font-size:30px;
+            text-align: center;
+            font-weight: bolder;
+        }
+        label{
+            font-size:20px;
+        }
+        input{
+            outline:none;
+            height:40px;
+            border-radius: 10px;
+            margin:5px;
+            background-color: black;
+            opacity:75%;
+            padding-left:4px;
+            border:none;
+        }
+        input[type="submit"]{
+            background:green;
+           
+        }
+        input:valid{
+            border-bottom:2px solid green;
+        }
+        input:invalid{
+            border-bottom:2px solid red;
+        }
+    </style>
+</body>
+</html>
