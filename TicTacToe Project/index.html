@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/arcade-classic" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    <title>Odin TicTacToe</title>
+</head>
+
+<body>
+    <div class="scoreboard">
+        <div id="player" class="scoreel">
+            <p>Player 1:<span id="pscore"> 0</span></p>
+        </div>
+        <div id="computer" class="scoreel">
+            <p>Player 2:<span id="cscore"> 0</span></p>
+        </div>
+    </div>
+    <div class="board-container">
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+    </div>
+</body>
+
+<script>
+    //Tictactoe v.1.0 by Iwegbu Jeddy
+    let gameBoardArray = ["", "", "", "", "", "", "", ""];
+    let history = []
+    let b = Array(document.querySelectorAll(".board-item"))[0];
+    let currentPlayer = "X";
+    let gameOver = false;
+        //Map the elements of the board array
+        for (let i = 0; i < b.length; i++) {
+            b[i].addEventListener("click", () => {
+                gameBoardArray[i] = currentPlayer;
+                b[i].innerHTML = `<p class="move">${gameBoardArray[i]}</p>`;
+                currentPlayer === "X" ? currentPlayer = "O" : currentPlayer = "X";
+
+            })
+
+        }
+
+
+    //Increment Player 2
+    const incrementCscore = () => {
+       document.querySelector('#cscore').innerText++
+
+    }
+    //Increment Player 1
+    const incrementPscore = () => {
+        document.querySelector('#pscore').innerText++
+    }
+    //Winning array
+    const winningSequences = [[0, 1, 2],
+    [0, 3, 6],
+    [6, 7, 8],
+    [1, 4, 7],
+    [2, 5, 8],
+    [2, 4, 6],
+    [0, 4, 8],
+    [3, 4, 5]
+    ];
+    //Reset board
+    const resetBoard = () => {
+        history.push(gameBoardArray);
+        gameBoardArray = gameBoardArray.map(elem => elem = "");
+        for (let i = 0; i < b.length; i++) {
+                b[i].innerHTML = `<p class="move">${gameBoardArray[i]}</p>`;
+                b[i].classList.remove("win");
+            }
+              
+                gameOver = !true;
+    }
+//Check for the winner
+    const checkWin = () => {
+    
+        for (let i = 0; i < winningSequences.length; i++) {
+            if (
+                (gameBoardArray[i] !== "" && b[winningSequences[i][0]].innerText == "X" ) &&
+                (gameBoardArray[i] !== "" && b[winningSequences[i][1]].innerText == "X" ) &&
+                (gameBoardArray[i] !== "" && b[winningSequences[i][2]].innerText == "X" )
+            ) {
+                b[winningSequences[i][0]].classList.add("win")
+                b[winningSequences[i][1]].classList.add("win")
+                b[winningSequences[i][2]].classList.add("win")
+                console.log("X wins")
+                gameOver = true;
+                incrementPscore();
+              
+               
+            }
+            else if(
+                (gameBoardArray[i] !== "" && b[winningSequences[i][0]].innerText == "O" ) &&
+                (gameBoardArray[i] !== "" && b[winningSequences[i][1]].innerText == "O" ) &&
+                (gameBoardArray[i] !== "" && b[winningSequences[i][2]].innerText == "O" )
+            ){
+                console.log("O wins");
+                gameOver = true;
+                incrementCscore();
+               
+            
+            }
+
+        }
+        if(gameOver == true){
+            resetBoard()
+        }
+            }
+      setInterval(checkWin,1)
+        
+
+
+
+
+</script>
+
+</html>
