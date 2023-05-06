@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+<script src="src/index.js"></script>   
+<script src="src/todoFns.js"></script> 
+<title>Todo List</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li>Tasks</li>
+            <li>Projects</li>
+        </ul>
+    </header>
+    <h1>Todo List</h1>
+    <div id="form">
+    <input type="text" name="" id="title" placeholder="Title">
+    <input type="text" name="" id="desc" placeholder="Description">
+    <input type="date" id="dates">
+    <select name="Priority" id="">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+    </select>
+    
+    <input type="submit" class="additem" onclick="createNewItem(); render();">
+</div>
+<h1>Tasks (<span id="tcount">0</span>)</h1>
+    <div id="tasks"></div>
+<h1>Completed Tasks (<span id="ccount">0</span>)</h1>
+    <div id="completedtasks"></div>
+</body>
+</html>
