@@ -42,6 +42,8 @@ body {
     border: 2px solid white;
     color: white;
     font-size: 2rem;
+    display:flex;
+    flex-direction: row;
 }
 
 .board-item {
