@@ -11,10 +11,9 @@ const getWeatherData = () => {
         })
         document.querySelector("#feelsLike").innerText = response.current.condition.text;
         document.querySelector("#humidity").innerText = response.current.humidity;
-        document.querySelector("#windspeed").innerText = response.current.wind_mph;
+        document.querySelector("#windspeed").innerText = response.current.wind_mph + "mph";;
         document.querySelector("#winddir").innerText = response.current.wind_dir;
-        document.querySelector("#pressure").innerText = response.current.pressure_mb;
+        document.querySelector("#pressure").innerText = response.current.pressure_mb + "mb";
     })
     .catch(err => console.error(err));
-    
 }
