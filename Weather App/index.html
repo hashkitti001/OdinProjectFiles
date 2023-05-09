@@ -17,17 +17,26 @@
     <h2>Weather App</h2>
     <div class="search-widget">
     <input type="search" name="" id="country" placeholder="I would like to check the weather in?">
-     <button id="search"><i class="fa fa-search" aria-hidden="true"></i></button>
+     <button id="search" onclick="getWeatherData()"><i class="fa fa-search" aria-hidden="true"></i></button>
     </div>
     </header>
     <div id="weather-display">
-        <div id="weather">
+        <div class="weather">
                 <img src="" alt="" id="w-pic">
                 <h3 id="cityName"></h3>
-                <p id="temperature"></p>
+                <h1 id="temperature"></h1>
                 <p id="feelsLike"></p>
-                <p id="humidity"></p>
-                <p id="wind"></p>
+               
+        </div>
+        <div class="weather" id="weather-details">
+            <h4>Humidity</h4>
+            <p id="humidity"></p>
+               <h4>Wind Direction</h4>
+                  <p id="winddir"></p>
+                  <h4>Wind speed</h4>
+                    <p id="windspeed"></p>
+                    <h4>Pressure</h4>
+                       <p id="pressure"></p>
         </div>
     </div>
 </body>

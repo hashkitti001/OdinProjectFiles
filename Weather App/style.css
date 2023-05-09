@@ -1,8 +1,29 @@
+:root{
+    --bgColor:hsl(217, 19%, 24%);
+}
 *{
     margin:0;
     border:0;
     box-sizing: border-box;
     font-family: 'Barlow', sans-serif;
+    
+}
+body{
+    background:var(--bgColor);
+    color:white;
+    background-size: cover;
+
+}
+#weather-display{
+    display: flex;
+    flex-direction: row;
+    gap: 45%;
+}
+img{
+    width:100px;
+    height:100px;
+    margin:0 auto 0 auto;
+
 }
 header{
     width:100%;
@@ -23,10 +44,28 @@ input[type="search"]{
     height:30px;
     width:240px;
     outline:none;
+    border-radius: 5px;
+    background: black;
+    border-bottom: 2px solid yellow;
+    color:yellow;
 }
 button{
     height:30px;
     width:50px;
-    background: turquoise;
-    color:white;
+    background: black;
+    color:yellow;
+    border-radius: 5px;
+}
+.weather{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:50%;
+    height:90vh;
+    text-align: center;
+    border: 2px solid yellow;
+}
+#weather-display p {
+    font-size:40px;
+    font-weight: 800;
 }
