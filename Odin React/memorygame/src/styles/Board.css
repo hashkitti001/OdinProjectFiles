@@ -1,0 +1,16 @@
+.board{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:repeat(2, 1fr);
+    grid-gap:20px;
+    margin:0 0 0 8%;
+}
+.board img {
+    border: 5px solid white;
+    border-radius: 20px;
+    min-width: 80%;
+}
+.board img:hover{
+    translate: rotateY(80deg);
+    border: 5px solid blueviolet;
+}
