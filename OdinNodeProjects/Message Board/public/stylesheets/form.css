@@ -1,0 +1,30 @@
+body{
+    background: purple;
+    color:#ffff;
+    font-family: serif;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input[type="text"]{
+    width:300px;
+    height:30px;
+    border-radius: 10px;
+    border: none;
+    outline:none;
+    font-size: 20px;
+    padding-left:3px;
+    }
+input[type="submit"]{
+    width:100px;
+    height:40px;
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+    color: aliceblue;
+    font-size: 20px;
+    margin: 20px;
+}

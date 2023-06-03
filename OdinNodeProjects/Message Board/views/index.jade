@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  each item in messages
+    h2=item.text
+    p= item.user
+    p= item.added
+  a(href="/new")
+    button(type="button") create new post
