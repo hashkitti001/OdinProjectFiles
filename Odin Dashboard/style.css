@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+.sidebar {
+    background: lightseagreen;
+    height: 100vh;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+
+}
+
+.sideitem {
+    margin: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.sideitem:hover {
+    color: yellowgreen;
+    padding-left:20px;
+    transition:2s ease;
+}
+h4, .card p{
+    margin-left:10px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.omnibox {
+    display: flex;
+    background: lightseagreen;
+}
+
+.search-container,
+.usercontrols {
+    display: flex;
+    background: white;
+}
+.icons{
+    display:flex; 
+    gap:20px;
+    margin:10px 0px 10px 60%;
+}
+.usercontrols {
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.text{
+    margin:20px 0 20px 0;
+}
+.search-container i {
+    width: 30px;
+    height: 32px;
+    margin: 25px;
+    background: white;
+}
+
+input {
+    width: 60%;
+    height: 35px;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid grey;
+    padding-left: 14px;
+    margin-top: 14px;
+    background: rgb(128, 128, 128);
+    opacity: 30%;
+    color: white;
+    font-size: 20px;
+}
+
+input::placeholder {
+    color: white;
+}
+
+h3 {
+    margin: 20px;
+}
+
+.dp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 50px;
+}
+
+.user-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 30%;
+
+}
+
+.btn {
+    width: 90px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background: lightseagreen;
+    color: white;
+    font-weight: bold;
+
+}
+.btn:hover{
+    background: lightgreen;
+    transition:1s ease;
+    margin-top:5px;
+}
+.welcome{
+    margin-bottom:20px;
+}
+.card {
+    width:300px;
+    height:150px;
+    padding-top:30px;
+    padding-bottom:30px;
+    line-height:1.4;
+    margin:30px;
+    border-left: 6px solid yellow;
+    background: white;
+}
+.card p{
+    font-size: 15px;
+}
+.cardsection{
+    background: #D3D3D3;
+    display: flex;
+    flex-direction: row;
+    
+}
+.cardsection p{
+    color:grey;
+    font-weight: light;
+    
+} 
+.taskcards {
+    display: grid;
+    grid-template-columns: repeat(2, 0.7fr);
+    grid-template-rows: repeat(3, 0.7fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.ann-board{
+    width:300px;
+    height:350px;
+    background:white;
+    padding:30px 0 30px 20px;
+    border-radius: 15px;
+   
+}
+.user{
+    display: flex;
+    flex-direction: row;
+    margin:20px 0 20px 0;
+}
+.uicon{
+    width:55px;
+    height:55px;
+    border-radius: 50%;
+    margin-right:20px;
+}
