@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin:auto;
+    font-family: "Roboto", sans-serif;
+}
+body {
+   
+     color:white;
+     background: black;
+     border: none;
+     text-align: center;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+  }
+  form input {
+    width:20rem;
+    height:40px;
+    background: #191970;
+    border-radius: 5px;
+    color:white;
+    outline:none;
+    padding-left:5px;
+  }
+  form input::placeholder{
+    color:white;
+  }
+  input[type="submit"]{
+    width:20rem;
+    height:50px;
+    background: purple;
+    font-size: 1em; 
+    font-weight: bold;
+  }

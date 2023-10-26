@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+  header(class= "navbar")
+    nav
+        ul
+          li
+            a(href="/")="Home"
+          li
+            a(href="/categories")="Categories"
+          li
+             a(href="/items")="Items"
+           li
+             a(href="/newitem")="Create New Item"
+            li
+             a(href="/categories/create")="Create New Category" 
+              
+    block content
+    

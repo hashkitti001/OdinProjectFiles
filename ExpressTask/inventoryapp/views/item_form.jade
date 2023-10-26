@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title Create New Item
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+  body
+    h2.text.text-center New Item
+    form.d-flex.flex-column.gap-3.mx-3(method="post")
+      label(for="name") Name
+      input.form-control.my-2(id="name" name="name" placeholder="Name" required)
+      
+      label(for="desc") Description
+      input.form-control.my-2(id="desc" name="desc" placeholder="Description" required)
+      
+      label(for="categ") Category
+      input.form-control.my-2(id="categ" name="categ" placeholder="Category" required)
+      
+      label(for="price") Price
+      input.form-control.my-2(id="price" name="price" placeholder="Price" required)
+      
+      label(for="nis") Number in Stock
+      input.form-control.my-2(id="nis" name="nis" placeholder="Number in Stock" required)
+      
+      input.btn.btn-primary(type="submit" value="Submit")
