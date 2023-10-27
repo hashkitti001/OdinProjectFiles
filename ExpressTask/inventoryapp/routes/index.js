@@ -7,9 +7,10 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/newitem', (req, res, next) => {
-  res.render('item_form')
+  res.render('item_form');
 })
 router.get('/categories', category_controller.category_create_get)
-router.get('/categories/create', category_controller.category_create_post);
+router.get('/categories/create', category_controller.category_create_get);
+router.post('/categories/create', category_controller.category_create_post);
 // console.log(category_controller)
 module.exports = router;
