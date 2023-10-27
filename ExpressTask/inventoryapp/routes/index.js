@@ -7,12 +7,11 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 //Item routes and methods
-router.get('/newitem', (req, res, next) => {
-  res.render('item_form');
-})
-router.get('/items', item_controller.category_create_get);
-router.get('/items/create', item_controller.category_create_get);
-router.post('/items/create', item_controller.category_create_post);
+// router.get('/newitem', (req, res, next) => {
+//   res.render('item_form');
+// })
+router.get('/items/create', item_controller.item_create_get)
+router.post('/items/create', item_controller.item_create_post)
 //Category routes and methods
 router.get('/categories', category_controller.category_create_get)
 router.get('/categories/create', category_controller.category_create_get);
