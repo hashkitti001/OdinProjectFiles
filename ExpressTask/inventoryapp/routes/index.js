@@ -10,6 +10,7 @@ router.get('/', function(req, res, next) {
 // router.get('/newitem', (req, res, next) => {
 //   res.render('item_form');
 // })
+router.get('/items', item_controller.item_create_get)
 router.get('/items/create', item_controller.item_create_get)
 router.post('/items/create', item_controller.item_create_post)
 //Category routes and methods
