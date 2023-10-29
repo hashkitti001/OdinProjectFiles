@@ -14,12 +14,20 @@ async function getItems(){
   const Items = await Item.find({})
   return Items
 }
-async function getCategory(){
+async function getCategories(){
   const gottenCategory = await Categories.find({})
   return gottenCategory
 }
+// async function getItem(id){
+//   const gottenItem = await Item.find({"_id": `ObjectId("${id}")`})
+//   // console.log(gottenItem)
+//   return gottenItem
+// }
+// async function getCategory(id){
+//   const gottenCategory = await Categories.find({"_id": `ObjectId("${id}")`})
+//   return gottenCategory
+// }
 main().catch(err => console.log(err))
-const items = require('../models/items');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
@@ -34,13 +42,27 @@ router.get('/items', (req, res) => {
  })
 })
 router.get('/items/create', item_controller.item_create_get)
+// router.get('/items/:id', async (req, res) => {
+//   let reqId = req.params.id;
+//   await getItem(reqId).then((FoundItem) => {
+//     res.render("item", {data: FoundItem})
+//   })
+// })
 router.post('/items/create', item_controller.item_create_post)
 //Category routes and methods
 router.get('/categories', (req, res) => {
-  getCategory().then((FoundItems) => {
+  getCategories().then((FoundItems) => {
      res.render("categories", {docs: FoundItems})
   })
  })
+//  router.get('/categories/:id', async (req, res) => {
+//   let reqId = req.params.id;
+  
+//   await getCategory(reqId).then((stuff) => {
+//     // console.log(FoundItem)
+//     res.render("item", {data: stuff})
+//   });
+// })
 router.get('/categories/create', category_controller.category_create_get);
 router.post('/categories/create', category_controller.category_create_post);
 // console.log(category_controller)

@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/omnisheet.css')
+  body
+  header(class="navbar")
+    nav
+        ul
+          li
+            a(href="/")="Home"
+          li
+            a(href="/categories")="Categories"
+          li
+             a(href="/items")="Items"
+           li
+             a(href="/items/create")="Create New Item"
+            li
+             a(href="/categories/create")="Create New Category" 
+              
+    block content
+     h1= "Item"
+     p= data
+     
