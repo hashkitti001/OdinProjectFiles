@@ -20,16 +20,14 @@ html
              a(href="/categories/create")="Create New Category" 
               
     block content
-     h1= "Items"
+     h1= "Categories"
      button.refresh(type="Refresh" onclick="refreshItemPage()") Refresh Data
     for doc in docs
      div(class="container")
         div(class="itemcontainer")
            h1= `Name : ${doc.name}`
            h3= `Description :${doc.description}`
-           h3= `Category : ${doc.category}`
-           h3= `Price : $ ${doc.price}`
-           p= `Number in stock: ${doc.numberInStock}`
+           
          
     script.
        let refreshItemPage = () => {

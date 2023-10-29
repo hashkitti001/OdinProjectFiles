@@ -1,6 +1,7 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-   
+  body(class="initpage")
+    h1.text.text-primary="Welcome to my Kitty World"
+    p="Manage your own kitty themed inventory" 
+   input.btn.btn-primary(type="submit" value="Let's Go!")

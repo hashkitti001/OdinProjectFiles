@@ -1,0 +1,29 @@
+body{
+    background:black;
+}
+h2, h3, p, label{
+    color:white;
+    font-weight:lighter;
+}
+
+input::placeholder{
+    color:white;
+    opacity: 100%;
+}
+.refresh {
+    background: #00B7FF;
+    width:120px;
+    height:30px;
+    border:none;
+    margin-bottom:20px;
+}
+.container{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:7px;
+}
+.itemcontainer{
+   border:2px solid #00B7FF;
+   text-align: center;
+}
+/* .itemcontainer{} */

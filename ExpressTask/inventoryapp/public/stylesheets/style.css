@@ -1,8 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-body {
+* {
   font-family:"Roboto", san-serif;
 }
+.initpage{
+  background: url("../images/cutecatbg.jpg");
+  text-align:center;
 
+}
+body {
+  background: black;
+}
+.initpage h1, .initpage p {
+  color:white;
+
+}
+.initpage .btn{
+ width:100px;
+ height:40px;
+ background:#00B7FF;
+ color:white;
+ border: none;
+ font-size: 20px;
+}
 h1, a {
   color: #00B7FF;
 }
