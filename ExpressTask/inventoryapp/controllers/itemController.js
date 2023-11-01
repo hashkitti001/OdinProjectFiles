@@ -2,12 +2,7 @@ const { body, validationResult } = require("express-validator");
 const Item = require("../models/items");
 const asyncHandler = require("express-async-handler")
 const mongoose = require("mongoose");
-let url = "mongodb://localhost:27017/InventoryDb"
 
-async function main (){
-    await mongoose.connect(url).then(console.log("Connected to", url));
-}
-main().catch(err => console.log(err))
 exports.item_create_get = asyncHandler(async (req, res, next) => {
    res.render("item_form")
 })

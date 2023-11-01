@@ -1,13 +1,7 @@
 const {body, validationResult} = require("express-validator")
 const Category  = require("../models/categories")
 const asyncHandler = require("express-async-handler")
-const mongoose = require("mongoose")
-let url = "mongodb://localhost:27017/InventoryDb"
 
-async function main (){
-    await mongoose.connect(url).then(console.log("Connected to", url));
-}
-main().catch(err => console.log(err))
 exports.category_create_get = (req, res, next) => {
     res.render("category_form")
 }
