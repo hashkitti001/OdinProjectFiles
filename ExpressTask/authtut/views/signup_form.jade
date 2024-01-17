@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h2 Sign Up
+  form(action="/signup", method="post")
+    div
+      label(for="username") Username:
+      input(type="text", name="username", required)
+    div
+      label(for="password") Password:
+      input(type="password", name="password", required)
+    div
+      input(type="submit", value="Sign Up")
+  p
+    a(href="/login") Already have an account? Login here
