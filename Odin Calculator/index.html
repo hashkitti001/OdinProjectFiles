@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,700;1,800&display=swap"
+        rel="stylesheet">
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.3.0/math.min.js"
+        integrity="sha512-k2XqlNMT3e0wVsA5tq6GAYn50wC6/vLk4jS5ytmtEz5ZOcug2eOzQtn8N3Q5Jd61kjLtjTjvZMIHISovqG6aMw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Calculator</title>
 </head>
 
@@ -35,7 +39,9 @@
                 <button class="key" onclick="appendCharacter('2')" value="2">2</button>
                 <button class="key" onclick="appendCharacter('1')" value="1">1</button>
                 <button class="zero key" onclick="appendCharacter('0')" value="0">0</button>
-                <button class="equal-sign key" onclick="document.querySelector('#result').innerText = (evalExpression(document.querySelector('#currentexp').innerHTML))" value="=">=</button>
+                <button class="equal-sign key"
+                    onclick="document.querySelector('#result').innerText = (evalExpression(document.querySelector('#currentexp').innerHTML))"
+                    value="=">=</button>
                 <button class="key" onclick="deleteChar()">Del</button>
             </div>
             <div class="signs">
@@ -46,12 +52,14 @@
                 <button class="operator key" onclick="appendCharacter('*')">*</button>
                 <button class="operator key" onclick="appendCharacter('.')">.</button>
 
-               
-                
+
+
 
             </div>
         </div>
     </div>
+
 </body>
+
 
 </html>

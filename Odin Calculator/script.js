@@ -1,21 +1,27 @@
+/*
+The calculator uses the math.js library to evaluate expressions as an alternative to eval()
+© Jos de Jong and contributors
+The math.evaluate() method precisely
+*/
 function appendCharacter(character) {
     document.querySelector("#currentexp").innerText += character;
 }
 
 function calculate() {
     try {
-        document.querySelector("#result").innerText.value = evalExpression(document.querySelector("#currentexp").innerText);
+        document.querySelector("#result").innerText.value = math.evaluate(document.querySelector("#currentexp").innerText);
     } catch (error) {
-        document.querySelector("#result").innerText = "Error";
+        document.querySelector("#result").innerText = "Error"
+
     }
 }
 
 function evalExpression(expression) {
-    if (eval(expression) == Infinity) {
+    if (math.evaluate(expression) == Infinity) {
         return "ZeroDivisionError"
     }
     else {
-        return eval(expression);
+        return math.evaluate(expression);
     }
 }
 function clearResult() {
@@ -27,5 +33,4 @@ function deleteChar() {
     let splitExp = exp.split("");
     splitExp.pop();
     document.querySelector("#currentexp").innerText = splitExp.join("");
-    console.log("clicked")
 }
