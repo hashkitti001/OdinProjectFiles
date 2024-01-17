@@ -8,8 +8,6 @@ const {MongoClient} = require("mongodb");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv")
 dotenv.config();
-// Use the MongoDB Atlas connection string
-// const url = "mongodb+srv://admin:hachishakusama@cluster0.rmjefxt.mongodb.net/InventoryDB";
 
 async function main() {
   let uri = process.env.MONGODB_URI;
