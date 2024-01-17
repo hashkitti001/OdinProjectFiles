@@ -4,7 +4,9 @@ body{
 *{
     font-family: 'Poppins', san-serif;
 }
-
+@media screen and (min-width:320px) {
+  
+}
 .container{
     background:orange;
     width:30%;
