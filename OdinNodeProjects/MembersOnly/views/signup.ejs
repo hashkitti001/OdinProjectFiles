@@ -8,17 +8,41 @@
 <body>
     <%- include('partials/header') %>
     <h1>Sign Up</h1>
-    <form>
+    <form id="signupForm">
         <label for="fullname">Full Name</label>
-        <input type="text" name="fullname" id="">
+        <input type="text" name="fullname" id="fname">
         <label for="username">Username</label>
-        <input type="email" name="username" id="">
+        <input type="email" name="username" id="uname">
 
         <label for="password">Password</label>
-        <input type="password" name="password" id="">
+        <input type="password" name="password" id="pwd">
         <label for="cpassword">Confirm Password</label>
         <input type="password" name="cpassword" id="">
         <input type="submit" value="Sign up!">
     </form>
+    <script>
+        let form = document.querySelector("form")
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault()
+           let password = form.pwd.value
+           let username = form.uname.value
+           let fullname = form.fname.value
+        console.log(username, fullname, password)
+           try {
+            const res  = await fetch('/signup', {
+                "method": "POST",
+                "headers": {
+                "Content-Type": "application/json"
+                },
+                "body": JSON.stringify({
+                    fullname, username, password
+                })
+            })
+           }
+           catch (e){
+                    console.error(e.message)
+                }
+        }) 
+    </script>
 </body>
 </html>
